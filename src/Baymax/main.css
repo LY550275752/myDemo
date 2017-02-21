@@ -1,0 +1,177 @@
+﻿*{
+	margin:0px;
+	padding:0px;
+}
+body{
+	background:#595959;
+	perspective:300px;
+}
+#baymax{
+	margin:20px auto;
+	height:600px;
+	overflow:hidden;
+	transform:scale(0.8);
+	transform-style:preserve-3d;
+	animation:change 5s infinite linear;
+}
+@-webkit-keyframes change {
+	 0% {   -webkit-transform:rotateX(0) rotateY(0) rotatez(0) ;}
+  25% { -webkit-transform:rotateX(10deg)  rotateY(10deg) rotatez(10deg) ; }
+  50% { -webkit-transform:rotateX(0deg)  rotateY(0deg) rotatez(0) scale(0.6); }
+  75% { -webkit-transform:rotateX(-10deg)  rotateY(-10deg) rotatez(-10deg) ; }
+  100% { -webkit-transform:rotateX(0deg)  rotateY(0) rotatez(0) ; }
+}
+.head{
+	height:64px;
+	width:100px;
+	/*定义圆角形状*/
+	border-radius:50%;
+	/*背景*/
+	background:#fff;
+	margin:0 auto;
+	margin-bottom:-20px;/*与躯干链接*/
+	/*下边框*/
+	border-bottom:5px solid #e0e0e0;
+	z-index:100;
+	position:relative;
+}
+.eye,.eye2{
+	width:11px;
+	height:13px;
+	background:#282828;
+	border-radius:50%;
+	position:relative;
+	top:30px;
+	left:27px;
+	/*旋转眼睛*/
+
+	transform: rotate(8deg);
+}
+.eye2{
+	transform:rotate(-8deg);
+	left:69px;
+	top:17px;
+}
+.mouth{
+	width:38px;
+	height:1.5px;
+	background:#282828;
+	position:relative;
+	left:33px;
+	top:10px;
+}
+.torso,.belly{
+	margin:0 auto;
+	width:180px; 
+	height:200px;
+	background:#FFF;
+	border-radius:47%;
+
+	border:5px solid #e0e0e0;
+	border-top:none;
+	z-index:1;
+}
+.heart{
+	width:25px;
+	height:25px;
+	border-radius:50%;
+	position:relative;
+	box-shadow:2px 5px 2px #ccc inset;
+	top:40px;
+	right:-115px;
+	z-index:111;
+	border:1px solid #ccc;
+}
+.belly{
+	width:245px;
+	height:300px;
+	margin-top:-140px;
+	z-index:5;
+}
+.cover{
+	width:190px;
+	background:#FFF;
+	height:150px;
+	margin:0 auto;
+	position:relative;
+	top:-20px;
+	border-radius:50%;
+}
+.left-arm,.right-arm{
+	height:270px;
+	width:120px;
+	border-radius:50%;
+	background:#FFF;
+	margin:0 auto;
+	position:relative;
+	top:-350px;
+	left:-100px;
+	transform:rotate(20deg);
+	z-index:-1;
+}
+.right-arm{
+	top:-620px;
+	left:100px;
+	transform:rotate(-20deg);
+}
+.l-bigfinger,.r-bigfinger{
+	height:50px;
+	width:20px;
+	background:#FFF;
+	border-radius:50%;
+	position:relative;
+	transform:rotate(-50deg);
+	top:252px;
+	left:55px;
+}
+.r-bigfinger{
+	left:45px;
+	transform:rotate(50deg);
+}
+.l-smallfinger,.r-smallfinger{
+	height:35px;
+	width:15px;
+	border-radius:50%;
+	background:#fff;
+	position:relative;
+	top:195px;
+	left:68px;
+	transform:rotate(-40deg);
+}
+.r-smallfinger{
+	transform:rotate(40deg);
+	left:37px;
+}
+.left-leg,.right-leg{
+	height:170px;
+	width:90px;
+	background:#FFF;
+	border-radius:40% 30% 10px 45%;
+	position:relative;
+	margin:0 auto;
+	top:-640px;
+	left:-45px;
+	transform:rotate(-1deg);
+	z-index:-2;
+}
+.right-leg{
+	border-radius:30% 40% 45% 10px;
+	position:relative;
+	top:-810px;
+	left:50px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

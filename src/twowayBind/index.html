@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>双向绑定</title>
+</head>
+<body>
+<input type="text" data-bind-1="name"/>
+<p>绑定的值:<span id="test"></span></p>
+<p>(这里为了演示使用定时器展示当前值，并未利用{{}}来显示)</p>
+
+<script type="text/javascript" src="https://cdn.bootcss.com/jquery/3.1.1/jquery.js"></script>
+<script type="text/javascript">
+
+
+	//发布订阅
+	function DataBind(object_id){
+		//简单使用JQ对象做发布订阅
+		var  pubSub= jQuery({});
+		console.log(pubSub);
+
+		//定义指令为data-bind+uid= "",id是优化性能
+		var message = object_id + "Change",
+			data_attr = "bind-" + object_id;
+
+		//事件代理，在绑定的对象上触发订阅
+		$(document).on('keyup',"[data-"+data_attr+"]",function(e){
+			//这里的this为通过selector找到的那个对象
+			var input = $(this);
+			//val驱动变量修改
+			pubSub.trigger(message,[input.data(data_attr), input.val()]);
+		})
+
+		//设置value或html
+		pubSub.on(message,function(e,key,newVal){
+			$("[data-"+data_attr+"="+key+"]").each(function(){
+				var self = $(this);
+				if(self.is("input,selector")){
+					self.val(newVal);
+				}else{
+					self.html(newVal);
+				}
+			})
+		})
+		//返回
+		return pubSub;
+	}
+
+	function User(uid){
+		var binder = new DataBind(uid);
+
+		var user = {
+			get:function(key){
+				return this[key];
+			},
+			set:function(key,val){
+				this[key] = val;
+				//变量key驱动val修改
+				binder.trigger(uid+"Change",[key,val,this]);
+			},
+			_binder:binder
+		}
+		binder.on(uid+"Change",function(e,key,newVal,initiator){
+			if(initiator !== user){
+				user.set(key,newVal);
+			}
+		})
+		return user;
+	}
+var a = new User('1');
+	a.set('name',"ly");
+var test = document.getElementById('test');
+	setInterval(function(){
+		test.innerHTML = a.name;
+	})
+</script>
+</body>
+</html>

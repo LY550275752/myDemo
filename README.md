@@ -12,4 +12,4 @@ Demo演示导航:http://ly550275752.github.io/myDemo/
 - 瀑布流布局 滚动加载
 - 评论框功能
 - 新闻滚动
-- [双向绑定ByJQ](/twowayBind)
+- [双向绑定ByJQ](src/twowayBind)

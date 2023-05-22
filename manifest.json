@@ -1,0 +1,18 @@
+{
+  "name": "天翼云电脑web版",
+  "short_name": "云电脑",
+  "description": "天翼云web客户端",
+  "display": "fullscreen",
+  "orientation": "landscape",
+  "id": "./?source=pwa",
+  "start_url": "./?source=pwa",
+  "theme_color": "#F5F7FA",
+  "background_color": "#F5F7FA",
+  "icons": [
+    {
+      "src": "static/icon_512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

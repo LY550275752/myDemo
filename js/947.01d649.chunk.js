@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkclink_web=self.webpackChunkclink_web||[]).push([[947],{60947:(e,n,c)=>{c.r(n),c.d(n,{default:()=>s});var t=c(89810);const l={class:"deviceContainer"};const r={},s=(0,c(57775).Z)(r,[["render",function(e,n){return(0,t.openBlock)(),(0,t.createElementBlock)("div",l)}]])}}]);

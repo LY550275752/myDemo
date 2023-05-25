@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkclink_web=self.webpackChunkclink_web||[]).push([[6202],{46202:(e,c,n)=>{n.r(c),n.d(c,{default:()=>k});var l=n(89810);const s={class:"detailFiles"};const t={},k=(0,n(57775).Z)(t,[["render",function(e,c){return(0,l.openBlock)(),(0,l.createElementBlock)("div",s)}]])}}]);

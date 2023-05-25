@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkclink_web=self.webpackChunkclink_web||[]).push([[8172],{68172:(e,n,c)=>{c.r(n),c.d(n,{default:()=>t});var r=c(89810);const o={},t=(0,c(57775).Z)(o,[["render",function(e,n){const c=(0,r.resolveComponent)("router-view");return(0,r.openBlock)(),(0,r.createBlock)(c)}]])}}]);

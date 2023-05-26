@@ -1,4 +1,4 @@
-const CACHE_NAME = `cloud-desktop-1684980135056`;
+const CACHE_NAME = `cloud-desktop-1685086873982`;
 
 // Use the install event to pre-cache all initial resources.
 self.addEventListener('install', event => {
